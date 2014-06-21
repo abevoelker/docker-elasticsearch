@@ -1,7 +1,7 @@
 FROM       ubuntu:trusty
 MAINTAINER Abe Voelker <abe@abevoelker.com>
 
-ENV VERSION 1.0
+ENV VERSION 0.90
 
 # Ignore APT warnings about not having a TTY
 ENV DEBIAN_FRONTEND noninteractive

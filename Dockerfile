@@ -52,6 +52,9 @@ ADD supervisor/elasticsearch.conf /etc/supervisor/conf.d/
 # Add example htpasswd (users should overwrite this with a more secure username/password)
 ADD data/htpasswd /data/
 
+# Link default elasticsearch.yml to /data
+RUN cd /data && ln -s /etc/elasticsearch/elasticsearch.yml
+
 # Clean up APT and temporary files when done
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
